@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "title": "Sample Case 1",
+            "subjects": ["Subject A"],
+            "field_offices": ["Office A"]
+        },
+        {
+            "title": "Case 2",
+            "subjects": ["Subject B"],
+            "field_offices": ["Office B"]
+        },
+        {
+            "title": "Case 3",
+            "subjects": [],
+            "field_offices": ["Office C"]
+        }
+    ]
+}
