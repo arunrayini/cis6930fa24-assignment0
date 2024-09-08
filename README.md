@@ -1,6 +1,6 @@
 **FBI Wanted Data Fetcher & Formatter**
 
-# Created by Arun Kumar Reddy Rayini
+Name: Arun Kumar Reddy Rayini
 
 **Introduction**
 
