@@ -43,7 +43,7 @@ Command  pipenv run python main.py --file pathtolocalfile.json
 The following outlines the key components of the project
 cis6930fa24-assignment0
 main.py                        - Main script to fetch and format data
-teststest_main.py              -Unit tests for the core functions
+tests                          -Unit tests for the core functions
 README.md                      - Documentation for the project
 setup.py                       -Configuration for packaging the project
 Pipfile                        -Environment and dependency management file
