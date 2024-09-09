@@ -22,21 +22,21 @@ Initialize Project Environment Create and activate the virtual environment using
 
 Command:pipenv install -e .
 Install Dependencies Run the following command to install all necessary packages
-Command:pipenv install
+Command - pipenv install
 
 # How to run
 The script can fetch data either directly from the FBI's API or from a local JSON file. Below are the commands to get started
 
 1. Fetch Data from the FBI API
 Use this command to pull and format data from the FBI's Most Wanted list
-Command pipenv run python main.py --page 1
+Command - pipenv run python main.py --page 1
 
 **Replace 1 with the desired page number to retrieve data from different pages of the API.**
 
 2. Use a Local JSON File
 If you want to work with a local JSON file, use the following command
 
-Command  pipenv run python main.py --file pathtolocalfile.json
+Command - pipenv run python main.py --file pathtolocalfile.json
 
 Project Structure
 
@@ -44,7 +44,7 @@ The following outlines the key components of the project
 cis6930fa24-assignment0
 main.py                        - Main script to fetch and format data
 tests                          -Unit tests for the core functions
-README.md                      - Documentation for the project
+README.md                      -Documentation for the project
 setup.py                       -Configuration for packaging the project
 Pipfile                        -Environment and dependency management file
 example.json                   -Sample JSON file for testing
@@ -93,7 +93,7 @@ Running Tests
 
 To ensure that all functionality works as expected, you can run the test suite using
 
-Command:pipenv run pytest -v
+Command - pipenv run pytest -v
 This will execute the unit tests defined in the teststest_main.py file.
 Known Issues and Considerations
 
