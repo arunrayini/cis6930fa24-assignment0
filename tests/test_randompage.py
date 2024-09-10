@@ -1,13 +1,23 @@
 import pytest
-from main import retrieve_data
+from main import retrieve_data, format_data
 
-def test_fetch_data_random_page():
-    """Verify data retrieval from an arbitrary page of the FBI API."""
-    # Retrieve data for page 3, as an example
-    response_data = retrieve_data(3)
-    
-    # Ensure the response contains the 'items' key
-    assert 'items' in response_data
-    
-    # Validate that 'items' is not an empty list
-    assert len(response_data['items']) > 0
+def test_random_page_retrieval():
+    """Ensure data can be retrieved from a random page of the FBI API."""
+    result = retrieve_data(4)
+    assert 'items' in result, "'items' not found in API response."
+    assert len(result['items']) > 0, "No data found in the 'items' list for page 4."
+
+def test_thorn_formatted_output():
+    """Test that formatted output is correctly thorn-separated (þ) for all fields."""
+    test_data = {
+        "items": [
+            {
+                "title": "Organized Crime Investigation",
+                "subjects": ["Gang Leader", "Drug Trafficking"],
+                "field_offices": ["Houston", "Phoenix"]
+            }
+        ]
+    }
+    thorn_output = format_data(test_data)
+    expected_output = "Organized Crime InvestigationþGang Leader,Drug TraffickingþHouston,Phoenix"
+    assert thorn_output == expected_output, f"Unexpected formatted output: {thorn_output}"
